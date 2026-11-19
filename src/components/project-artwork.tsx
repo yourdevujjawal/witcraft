@@ -5,7 +5,7 @@ export function ProjectArtwork({ project, large = false }: { project: Project; l
     <div className={`project-artwork artwork-${project.accent} ${large ? "project-artwork-large" : ""}`} aria-hidden="true">
       <div className="artwork-topline">
         <span>W / {project.number}</span>
-        <span>{project.year}</span>
+        <span>Illustrative study · {project.year}</span>
       </div>
       {project.slug === "truerdp" ? (
         <div className="rdp-window">

@@ -36,7 +36,7 @@ src/
   lib/          Typed content and site configuration
 ```
 
-Project content lives in `src/lib/projects.ts`. Every case study identifies its current status: in development, open source or concept.
+Project content lives in `src/lib/projects.ts`. Every case study identifies its current status: in development, open source or concept. The CSS-built project visuals are illustrative placeholders; replace them with verified project screenshots before presenting them as actual product interfaces.
 
 ## Portfolio-only release
 This repository implements a portfolio and project showcase only:

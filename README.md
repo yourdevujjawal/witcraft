@@ -7,11 +7,11 @@ Witcraft is an independent digital engineering portfolio exploring considered we
 Website: https://witcraft.me
 
 ## Stack
-- Next.js 15 App Router
+- Next.js 16 App Router
 - React 19
-- TypeScript
-- Tailwind CSS 3
-- Lucide icons
+- TypeScript 6
+- Tailwind CSS 4
+- Hugeicons (React renderer + free icon pack)
 - CSS-driven visual system
 
 ## Getting started

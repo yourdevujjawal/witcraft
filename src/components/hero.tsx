@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowDown, ArrowUpRight, MoveUpRight } from "lucide-react";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { ArrowDown01Icon, ArrowUpRight01Icon } from "@hugeicons/core-free-icons";
 import { Container } from "@/components/container";
 
 export function Hero() {
@@ -24,10 +25,10 @@ export function Hero() {
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-3">
               <Link href="/work" className="button-dark">
-                Explore selected work <ArrowUpRight size={16} />
+                Explore selected work <HugeiconsIcon icon={ArrowUpRight01Icon} size={16} strokeWidth={1.7} />
               </Link>
               <Link href="/about" className="button-quiet">
-                The thinking behind it <MoveUpRight size={15} />
+                The thinking behind it <HugeiconsIcon icon={ArrowUpRight01Icon} size={15} strokeWidth={1.7} />
               </Link>
             </div>
           </div>
@@ -41,7 +42,7 @@ export function Hero() {
             </div>
             <span className="hero-coordinate coordinate-one">19°N 72°E</span>
             <span className="hero-coordinate coordinate-two">FIG. 001 — WITCRAFT</span>
-            <span className="hero-visual-arrow"><ArrowDown size={16} /></span>
+            <span className="hero-visual-arrow"><HugeiconsIcon icon={ArrowDown01Icon} size={16} strokeWidth={1.7} /></span>
           </div>
         </div>
         <div className="hero-bottom">

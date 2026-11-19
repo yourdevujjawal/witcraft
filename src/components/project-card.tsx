@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { ArrowUpRight01Icon } from "@hugeicons/core-free-icons";
 import type { Project } from "@/lib/projects";
 import { ProjectArtwork } from "@/components/project-artwork";
 
@@ -15,7 +16,7 @@ export function ProjectCard({ project }: { project: Project }) {
             <p className="mt-2 max-w-md text-sm leading-6 text-muted">{project.summary}</p>
           </div>
           <span className="mt-1 grid size-10 shrink-0 place-items-center rounded-full border border-ink/15 transition duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:border-ink group-hover:bg-ink group-hover:text-paper">
-            <ArrowUpRight size={17} />
+            <HugeiconsIcon icon={ArrowUpRight01Icon} size={17} strokeWidth={1.7} />
           </span>
         </div>
         <div className="mt-5 flex flex-wrap items-center gap-2">

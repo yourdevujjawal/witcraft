@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowUpRight, Github } from "lucide-react";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { ArrowUpRight01Icon, GithubIcon } from "@hugeicons/core-free-icons";
 import { Container } from "@/components/container";
 import { Wordmark } from "@/components/wordmark";
 import { siteConfig } from "@/lib/site";
@@ -14,17 +15,15 @@ export function SiteFooter() {
           <div>
             <p className="eyebrow text-signal">A thought, an idea, a work in progress.</p>
             <h2 className="mt-5 max-w-2xl font-display text-4xl font-medium leading-[1.04] tracking-editorial text-paper sm:text-6xl">
-              Keep making
-              <br />
-              <span className="text-signal">good things.</span>
+              Keep making<br /><span className="text-signal">good things.</span>
             </h2>
           </div>
           <div className="flex flex-col gap-4 md:items-end">
             <Link href="/work" className="footer-link">
-              Explore selected work <ArrowUpRight size={16} />
+              Explore selected work <HugeiconsIcon icon={ArrowUpRight01Icon} size={16} strokeWidth={1.7} />
             </Link>
             <a href={siteConfig.social.github} target="_blank" rel="noreferrer" className="footer-link">
-              GitHub <Github size={16} />
+              GitHub <HugeiconsIcon icon={GithubIcon} size={16} strokeWidth={1.7} />
             </a>
           </div>
         </div>

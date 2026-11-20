@@ -11,6 +11,7 @@ const links = [
   { href: "/work", label: "Work" },
   { href: "/capabilities", label: "Capabilities" },
   { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export function SiteHeader() {
@@ -24,8 +25,8 @@ export function SiteHeader() {
           {links.map((link) => (
             <Link key={link.href} href={link.href} className="nav-link">{link.label}</Link>
           ))}
-          <Link href="/work" className="header-cta">
-            Explore work <HugeiconsIcon icon={ArrowUpRight01Icon} size={15} strokeWidth={1.7} />
+          <Link href="/contact" className="header-cta">
+            Get in touch <HugeiconsIcon icon={ArrowUpRight01Icon} size={15} strokeWidth={1.7} />
           </Link>
         </nav>
         <button
@@ -43,8 +44,8 @@ export function SiteHeader() {
           {links.map((link) => (
             <Link key={link.href} href={link.href} onClick={() => setOpen(false)}>{link.label}</Link>
           ))}
-          <Link href="/work" onClick={() => setOpen(false)}>
-            Explore work <HugeiconsIcon icon={ArrowUpRight01Icon} size={16} strokeWidth={1.7} />
+          <Link href="/contact" onClick={() => setOpen(false)}>
+            Get in touch <HugeiconsIcon icon={ArrowUpRight01Icon} size={16} strokeWidth={1.7} />
           </Link>
         </nav>
       )}

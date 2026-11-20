@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { ArrowUpRight01Icon, GithubIcon } from "@hugeicons/core-free-icons";
+import { ArrowUpRight01Icon, GithubIcon, Mail01Icon } from "@hugeicons/core-free-icons";
 import { Container } from "@/components/container";
 import { Wordmark } from "@/components/wordmark";
 import { siteConfig } from "@/lib/site";
@@ -19,11 +19,14 @@ export function SiteFooter() {
             </h2>
           </div>
           <div className="flex flex-col gap-4 md:items-end">
-            <Link href="/work" className="footer-link">
-              Explore selected work <HugeiconsIcon icon={ArrowUpRight01Icon} size={16} strokeWidth={1.7} />
+            <Link href="/contact" className="footer-link">
+              Get in touch <HugeiconsIcon icon={ArrowUpRight01Icon} size={16} strokeWidth={1.7} />
             </Link>
             <a href={siteConfig.social.github} target="_blank" rel="noreferrer" className="footer-link">
               GitHub <HugeiconsIcon icon={GithubIcon} size={16} strokeWidth={1.7} />
+            </a>
+            <a href={`mailto:${siteConfig.email}`} className="footer-link">
+              {siteConfig.email} <HugeiconsIcon icon={Mail01Icon} size={16} strokeWidth={1.7} />
             </a>
           </div>
         </div>
@@ -32,9 +35,6 @@ export function SiteFooter() {
           <p>© {new Date().getFullYear()} Witcraft. Built with care.</p>
           <Link href="/privacy" className="transition hover:text-paper">Privacy</Link>
         </div>
-        <p className="max-w-3xl border-t border-paper/10 py-5 text-[11px] leading-6 text-paper/45">
-          Portfolio-only mode: this website documents projects and technical interests. It does not accept commercial enquiries, bookings or paid engagements.
-        </p>
       </Container>
     </footer>
   );

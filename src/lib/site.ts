@@ -5,8 +5,9 @@ export const siteConfig = {
   description:
     "A digital engineering portfolio exploring considered websites, intuitive interfaces and reliable web applications.",
   tagline: "Good ideas deserve thoughtful engineering.",
+  email: "witcraftofficial@gmail.com",
   announcement:
-    "An independent digital engineering portfolio. Commercial engagements are not enabled.",
+    "An independent digital engineering portfolio.",
   social: {
     github: "https://github.com/yourdevujjawal",
     devkitForge: "https://github.com/truerdp/devkit-forge",

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 
 type FormState = "idle" | "sending" | "success" | "error";
 
@@ -10,7 +10,7 @@ export function ContactForm() {
   const [state, setState] = useState<FormState>("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
-  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setState("sending");
     setErrorMessage("");
@@ -18,7 +18,6 @@ export function ContactForm() {
     const form = event.currentTarget;
     const formData = new FormData(form);
     formData.set("access_key", ACCESS_KEY);
-    formData.set("subject", "New enquiry from Witcraft");
     formData.set("from_name", String(formData.get("name") ?? ""));
 
     try {

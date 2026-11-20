@@ -9,6 +9,7 @@ const ACCESS_KEY = "e2e299de-a549-4346-9d42-fcb687db6ac4";
 export function ContactForm() {
   const [state, setState] = useState<FormState>("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const [subject, setSubject] = useState("");
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -19,6 +20,7 @@ export function ContactForm() {
     const formData = new FormData(form);
     formData.set("access_key", ACCESS_KEY);
     formData.set("from_name", String(formData.get("name") ?? ""));
+    formData.set("subject", subject.trim());
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -32,6 +34,7 @@ export function ContactForm() {
       }
 
       form.reset();
+      setSubject("");
       setState("success");
     } catch (error) {
       setErrorMessage(
@@ -74,6 +77,8 @@ export function ContactForm() {
         <span className="mb-2 block text-xs font-medium uppercase tracking-widest text-muted">Subject</span>
         <input
           name="subject"
+          value={subject}
+          onChange={(event) => setSubject(event.target.value)}
           required
           maxLength={150}
           placeholder="What would you like to discuss?"
